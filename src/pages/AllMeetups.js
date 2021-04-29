@@ -6,7 +6,7 @@ function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
-  const api_url = process.env.REACT_APP_MEETUP_API;
+  const api_url = "https://azapp-meetup.azurewebsites.net/meetups";
 
   useEffect(() => {
     setIsLoading(true);

@@ -5,7 +5,7 @@ import NewMeetupForm from "../components/meetups/NewMeetupForm";
 function NewMeetupPage() {
   const history = useHistory();
 
-  const api_url = process.env.REACT_APP_MEETUP_API;
+  const api_url = "https://azapp-meetup.azurewebsites.net/meetups";
 
   function addMeetupHandler(meetupData) {
     fetch(api_url, {
