@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 
 import MeetupList from "../components/meetups/MeetupList";
 
-function AllMeetupsPage() {
+function AllMeetupsPage(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
-  const api_url = "https://azapp-meetup-api.azurewebsites.net/meetups";
+  const api_url = props.api_url;
 
   useEffect(() => {
     setIsLoading(true);

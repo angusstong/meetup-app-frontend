@@ -2,10 +2,10 @@ import { useHistory } from "react-router-dom";
 
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 
-function NewMeetupPage() {
+function NewMeetupPage(props) {
   const history = useHistory();
 
-  const api_url = "https://azapp-meetup-api.azurewebsites.net/meetups";
+  const api_url = props.api_url;
 
   function addMeetupHandler(meetupData) {
     fetch(api_url, {
